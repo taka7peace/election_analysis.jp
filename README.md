@@ -1,7 +1,10 @@
 # election_analysis.jp
 
 ## Introduction
+data analysis project of voting results for the Osaka metropolitan plan
 
+
+## Results
 "In districts with a higher proportion of males, there is a higher rate of approval. Similarly, in districts where there is a higher proportion of individuals in their 30s to 50s, the approval rate is higher.
 
 Objective Clarification (Setting the dependent variable)
@@ -36,21 +39,21 @@ Feature 6 'Average Annual Income per Person'
 '2. Proportion of 30-50s'
 '3. Male Ratio'
 
-Data acquisition method: Download the 2020 age and gender-specific estimated population from the Osaka City HP
+Data acquisition method: Download the 2020 age and gender-specific estimated population from the Osaka City HP(https://www.city.osaka.lg.jp/toshikeikaku/page/0000015211.html)
 Cleansing Method: Calculate the proportion of the target age group and the male ratio for the entire population and create a field for each district.
 
 '4. Time to the main government building'
 
-Data acquisition and cleansing method: Calculate the average required time from the old district center station to the nearest station of the new ward office at 8, 12, 15, and 18 on Saturday.
+Data acquisition and cleansing method: Calculate the average required time from the old district center station to the nearest station of the new ward office at 8, 12, 15, and 18 on Saturday.(https://ekitan.com/)
 
 '5. Average Household Size'
 
-Data acquisition method: Download the number of people per household in 2020 from the Osaka City HP
+Data acquisition method: Download the number of people per household in 2020 from the Osaka City HP(https://www.city.osaka.lg.jp/toshikeikaku/page/0000068035.html)
 Cleansing Method: Create a field for each district
 
 '6. Average income per person'
 
-Data acquisition method: Download income class data by household from the Osaka City HP
+Data acquisition method: Download income class data by household from the Osaka City HP (https://www.city.osaka.lg.jp/toshikeikaku/page/0000233170.html)
 Analysis and visualization of results
 Cleansing Method: Calculate the average annual household income by multiplying the average annual income and proportion for each class, and divide by the average household size obtained in 5.
 
