@@ -13,7 +13,7 @@ Dependent variable: Approval rate
 Independent variables: Features that can be potential factor candidates
 With this in mind, I plan to proceed with the analysis.since I want to extract the factors of the district where the approval rate has changed significantly compared to the last time, I will group the outliers with the dependent variable as this time's approval rate and the independent variable as the previous approval rate.
 
-##Feature Selection
+## Feature Selection
 (Selection of independent variables)
 
 This time, it was a bit peculiar that only people in their 20s are reversing the trend, so considering the presence or absence of this effect,
@@ -30,7 +30,7 @@ Feature 5 'Average Household Size'
 
 Feature 6 'Average Annual Income per Person'
 
-##Data Collection and Cleansing
+## Data Collection and Cleansing
 '1. Proportion over 60' 
 
 '2. Proportion of 30-50s'
@@ -54,23 +54,55 @@ Data acquisition method: Download income class data by household from the Osaka 
 Analysis and visualization of results
 Cleansing Method: Calculate the average annual household income by multiplying the average annual income and proportion for each class, and divide by the average household size obtained in 5.
 
+## Result for election_feature 
+
+In order of importance
+
+Feature 2 'Proportion of 30-50s'
+
+Feature 5 'Average Household Size'
+
+Feature 3 'Male Ratio'
+
+There is more approval in 'districts with a high proportion of working-age males, fewer average household sizes, and located in the north', and
+
+There is more opposition in 'districts with a low proportion of working-age males, many families, and located in the south'
+
+Judging from the feature importance, the influence of age composition is the largest and the influence of male ratio is the smallest)
+
+As can be seen from the correlation analysis, the relatively large opposition in their 20s (the reversal phenomenon with their 30s) is also likely to affect the difference in approval rate by district.
+
+
 ![Screenshot 2023-04-28 153839](https://github.com/taka7peace/election_analysis.jp/assets/114953599/17b3027e-b31b-4622-b58a-d33c9a77b1ad)
 
 
 ![Screenshot 2023-04-28 154244](https://github.com/taka7peace/election_analysis.jp/assets/114953599/44ff17ce-2731-40e7-a1b5-f35a6ad00425)
 
+## before tuning 
+
+The predicted value (color intensity) is the same for all conditions, indicating that the regression was not successful.
+
+Needs improvement in tuning
 
 ![Screenshot 2023-05-19 153813](https://github.com/taka7peace/election_analysis.jp/assets/114953599/3576989a-71b4-412c-9cf8-74f21f435f1a)
 
-
+## Learning Curve
 
 ![Screenshot 2023-05-19 153640](https://github.com/taka7peace/election_analysis.jp/assets/114953599/043cb235-6199-4bbd-b048-95b01dc800ac)
 
+・Is the target performance achieved?
+
+→ Although the target performance is not set, it is OK because it has improved significantly from before tuning (-0.0369 → -0.0150)
 
 
+・Isn't it overfitting?
+
+→ Reversal can be seen in the part where the number of data is small, but it is OK because the verification data index and the training data index finally converge
+
+
+## after tuning 
 ![Screenshot 2023-05-19 153802](https://github.com/taka7peace/election_analysis.jp/assets/114953599/a3a8712f-7697-4c6a-a56e-2ee88b6c8af7)
 
-## Result 
 
 Before tuning, the predictions were constant and did not regress well,
 
