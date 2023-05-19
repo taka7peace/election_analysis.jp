@@ -73,12 +73,11 @@ Judging from the feature importance, the influence of age composition is the lar
 As can be seen from the correlation analysis, the relatively large opposition in their 20s (the reversal phenomenon with their 30s) is also likely to affect the difference in approval rate by district.
 
 
-![Screenshot 2023-04-28 153839](https://github.com/taka7peace/election_analysis.jp/assets/114953599/17b3027e-b31b-4622-b58a-d33c9a77b1ad)
-
+## 7 Target Parameters
 
 ![Screenshot 2023-04-28 154244](https://github.com/taka7peace/election_analysis.jp/assets/114953599/44ff17ce-2731-40e7-a1b5-f35a6ad00425)
 
-## before tuning 
+## Before tuning 
 
 The predicted value (color intensity) is the same for all conditions, indicating that the regression was not successful.
 
@@ -100,7 +99,7 @@ Needs improvement in tuning
 → Reversal can be seen in the part where the number of data is small, but it is OK because the verification data index and the training data index finally converge
 
 
-## after tuning 
+## After tuning 
 ![Screenshot 2023-05-19 153802](https://github.com/taka7peace/election_analysis.jp/assets/114953599/a3a8712f-7697-4c6a-a56e-2ee88b6c8af7)
 
 
