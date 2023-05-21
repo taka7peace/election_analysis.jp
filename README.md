@@ -75,15 +75,16 @@ As can be seen from correlation analysis, the substantial opposition in their 20
 
 → Reversal can be seen in the part where the number of data is small, but it is OK because the verification data index and the training data index finally converge
 
-![Screenshot 2023-05-19 153813](https://github.com/taka7peace/election_analysis.jp/assets/114953599/3576989a-71b4-412c-9cf8-74f21f435f1a)
-
 ### Before tuning: 
 The model predicted the same value (color intensity) for all conditions, indicating unsuccessful regression. The model needed improvement in tuning.
 
-![Screenshot 2023-05-19 153802](https://github.com/taka7peace/election_analysis.jp/assets/114953599/a3a8712f-7697-4c6a-a56e-2ee88b6c8af7)
+![Screenshot 2023-05-19 153813](https://github.com/taka7peace/election_analysis.jp/assets/114953599/3576989a-71b4-412c-9cf8-74f21f435f1a)
+
 
 ### After tuning: 
 The model showed significant improvement. It successfully captured trends, indicating higher approval rates (darker color) for districts with a higher male ratio, more people between the ages of 30-60, and located further north.
+
+![Screenshot 2023-05-19 153802](https://github.com/taka7peace/election_analysis.jp/assets/114953599/a3a8712f-7697-4c6a-a56e-2ee88b6c8af7)
 
 ## Final Thoughts
 Optuna emerged as the best algorithm for parameter tuning of LightGBM, both in terms of speed and evaluation metrics. Please note that certain parameters can affect the learning time, potentially slowing down the speed of grid search. Although the model did not meet a specific target performance, the tuning significantly improved its performance, which is a success in its
